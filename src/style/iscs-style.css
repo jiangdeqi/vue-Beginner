@@ -1,0 +1,27 @@
+html,body {
+  width:100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#app-index {
+  color: #2c3e50;
+  font-family: Source Sans Pro, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#app-index a {
+  color: #42b983;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100px;
+  height: 100px
+}
+
+
+.el-select {
+  width:240px;
+}
