@@ -2,7 +2,7 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
-
+//处理生成文件
 module.exports = {
   entry: {
     app: './src/main.js'
