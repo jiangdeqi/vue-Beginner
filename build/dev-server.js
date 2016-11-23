@@ -24,7 +24,7 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 })
 
 var hotMiddleware = require('webpack-hot-middleware')(compiler)
-// force page reload when html-webpack-plugin template changes
+//  html-webpack-plugin 模板变化重新载入
 compiler.plugin('compilation', function (compilation) {
   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
     hotMiddleware.publish({ action: 'reload' })
@@ -32,7 +32,7 @@ compiler.plugin('compilation', function (compilation) {
   })
 })
 
-// proxy api requests
+// 代理API请求
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]
   if (typeof options === 'string') {
@@ -41,17 +41,17 @@ Object.keys(proxyTable).forEach(function (context) {
   app.use(proxyMiddleware(context, options))
 })
 
-// handle fallback for HTML5 history API
+// 处理回退 HTML5 历史 API
 app.use(require('connect-history-api-fallback')())
 
-// serve webpack bundle output
+// 服务 webpack 束输出
 app.use(devMiddleware)
 
-// enable hot-reload and state-preserving
-// compilation error display
+// 启用热重新加载和状态保存
+// 编译错误显示
 app.use(hotMiddleware)
 
-// serve pure static assets
+// 静态服务
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 

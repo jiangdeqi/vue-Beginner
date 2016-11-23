@@ -4,14 +4,17 @@ var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 //处理生成文件
 module.exports = {
+  // 入口
   entry: {
     app: './src/main.js'
   },
+  // 输出
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
   },
+  // 加载器
   resolve: {
     extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
@@ -22,9 +25,15 @@ module.exports = {
       'components': path.resolve(__dirname, '../src/components')
     }
   },
+  // 转es5
+  babel: {
+      presets: ['es2015'],
+      plugins: ['transform-runtime']
+  },
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  //加载模块
   module: {
     loaders: [
       {
