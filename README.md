@@ -92,3 +92,10 @@ http://rc.vuejs.org/                       英文文档
 [Chat by Vue + Webpack](https://github.com/Coffcer/vue-chat)
 
 [用Vue实现的拖拽效果](http://jsfiddle.net/lain8dono/mrnyf79e/)
+
+#手记
+
+```
+http://www.imooc.com/article/details/id/6991 1.x版本
+http://www.imooc.com/article/14231 2.x版本
+```
