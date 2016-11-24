@@ -3,6 +3,10 @@
 <!--<hello></hello>-->
 <template>
   <div id="app-index">
+<router-link to="/list">list创建</router-link>
+<router-link to="/news">news创建</router-link>
+
+<router-view class="view"></router-view>
     <el-row >
       <el-col :span="6" class="mrg10T pad10L pad10R">
         <div class="grid-content pad10A bg-ccc height-300">
@@ -25,15 +29,21 @@
         <div class="grid-content pad10A bg-ccc height-300">
           <el-radio class="radio" v-model="radio" label="1">备选项1</el-radio>
           <el-radio class="radio" v-model="radio" label="2">备选项2</el-radio>
-          <el-select v-model="value" >
-            <el-option
-              v-for="item in options"
-              :label="item.label"
-              :value="item.value" @click.native="tiemok(item)">
+          <el-select v-model="value" style="width:240px;" >
+            <el-option v-for="item in options" :label="item.label" :value="item.value" @click.native="tiemok(item)">
             </el-option>
           </el-select>
+          
         </div>
       </el-col>
+      <el-col :span="6" class="mrg10T pad10L pad10R">
+        <div class="grid-content pad10A bg-ccc height-300">
+          <el-progress class="mrg25T" type="circle" :percentage="25"></el-progress>
+        </div>
+      </el-col>
+
+
+      
     </el-row>
 
   </div>
@@ -86,6 +96,9 @@
     methods: {
       tiemok: function(item) {
         console.log(item.label);
+      },
+       handleSelect(key, keyPath) {
+        console.log(key, keyPath);
       },
       add: function(item){
         this.cardList.push({

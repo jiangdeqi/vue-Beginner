@@ -26,10 +26,10 @@ module.exports = {
     }
   },
   // 转es5
-  babel: {
-      presets: ['es2015'],
-      plugins: ['transform-runtime']
-  },
+  // babel: {
+  //     presets: ['es2015'],
+  //     plugins: ['transform-runtime']
+  // },
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
