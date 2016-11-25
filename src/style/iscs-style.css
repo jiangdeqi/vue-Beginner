@@ -21,3 +21,8 @@ html,body {
   height: 100px
 }
 
+.el-menu-item a {
+  display: block;
+  color: #c0ccda;
+  text-decoration: none;
+}

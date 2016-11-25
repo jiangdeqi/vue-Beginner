@@ -5,6 +5,8 @@ import App from './app'
 import Heads from './views/heads.vue'
 import list from './views/list.vue'
 import news from './views/news.vue'
+import Home from './views/home.vue'
+
 //路由组件
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -31,13 +33,16 @@ const routes = [{
         component: app
     }, {
         path: '/list',
-        component: list,
+        component: list
     }, {
         path: '/news',
-        component: news,
+        component: news
     }, {
         path: '/heads',
-        component: Heads,
+        component: Heads
+    }, {
+        path: '/home',
+        component: Home
     }
 
 ];
