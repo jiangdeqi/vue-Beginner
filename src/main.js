@@ -41,7 +41,7 @@ const routes = [{
         path: '/heads',
         component: Heads
     }, {
-        path: '/home',
+        path: '/',
         component: Home
     }
 

@@ -84,9 +84,6 @@
       tiemok: function(item) {
         console.log(item.label);
       },
-       handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      },
       add: function(item){
         this.cardList.push({
           name:item.name,
