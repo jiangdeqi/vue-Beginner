@@ -10,7 +10,6 @@
     },
     methods: {
       handleChange(value) {
-        debugger
         console.log(value);
       }
     }

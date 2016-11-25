@@ -18,7 +18,9 @@
 <script>
   export default {
     data(){
-
+      return {
+        num1: ''
+      }
     },
     methods: {
       handleSelect(key, keyPath) {
