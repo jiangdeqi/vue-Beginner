@@ -5,16 +5,17 @@ html,body {
   margin: 0;
 }
 
-#app-index {
+#app {
   color: #2c3e50;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
-#app-index a {
-  color: #42b983;
-  text-decoration: none;
-}
+
 
 .logo {
   width: 100px;

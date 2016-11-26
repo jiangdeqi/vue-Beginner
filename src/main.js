@@ -1,11 +1,11 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './app'
 import Heads from './views/heads.vue'
 import list from './views/list.vue'
 import news from './views/news.vue'
 import Home from './views/home.vue'
+import Footers from './views/footers.vue'
 
 //路由组件
 import VueRouter from 'vue-router'
@@ -29,22 +29,15 @@ Vue.use(VueRouter)
 
 // 路由 
 const routes = [{
-        path: '/app',
-        component: app
-    }, {
         path: '/list',
         component: list
     }, {
         path: '/news',
         component: news
     }, {
-        path: '/heads',
-        component: Heads
-    }, {
         path: '/',
         component: Home
     }
-
 ];
 const router = new VueRouter({
     routes // （缩写）相当于 routes: routes
@@ -53,8 +46,8 @@ const router = new VueRouter({
 const app = new Vue({
     router,
     components: {
-        app: App,
-        heads:Heads
+        heads:Heads,
+        footers:Footers
     }
 
 }).$mount('#app');
