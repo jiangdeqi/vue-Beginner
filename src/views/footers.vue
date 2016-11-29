@@ -3,7 +3,7 @@
   <div>姜德奇VUE实现</div>
 </footer>
 </template>
-<style>
+<style scoped>
 .footers {
   width:100%;
   height:40px;

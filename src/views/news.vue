@@ -14,7 +14,7 @@
   </el-col>
 </el-row>
 </template>
-<style>
+<style scoped>
   .time {
     font-size: 13px;
     color: #999;
