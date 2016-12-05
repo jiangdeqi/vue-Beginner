@@ -37,7 +37,11 @@
 
   </div>
 </template>
-
+<style>
+.el-dialog {
+  margin-top:150px;
+}
+</style>
 <script>
   export default {
     data() {
