@@ -6,6 +6,7 @@ import list from './views/list.vue'
 import news from './views/news.vue'
 import Home from './views/home.vue'
 import Footers from './views/footers.vue'
+import Dlogs from './views/dlogs.vue'
 
 //路由组件
 import VueRouter from 'vue-router'
@@ -37,6 +38,9 @@ const routes = [{
     }, {
         path: '/',
         component: Home
+    }, {
+        path:'/dlog',
+        component: Dlogs
     }
 ];
 const router = new VueRouter({

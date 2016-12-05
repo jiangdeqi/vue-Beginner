@@ -9,6 +9,7 @@
     <el-menu-item index="2-3">选项3</el-menu-item>
   </el-submenu>
   <el-menu-item index="4"><router-link to="/news">news创建</router-link></el-menu-item>
+  <el-menu-item index="5"><router-link to="/dlog">dialog创建</router-link></el-menu-item>
   
 </el-menu>
 </template>
