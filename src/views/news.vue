@@ -7,7 +7,7 @@
         <span>好吃的汉堡</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">操作按钮</el-button>
+          <el-button type="primary">操作按钮</el-button>
         </div>
       </div>
     </el-card>

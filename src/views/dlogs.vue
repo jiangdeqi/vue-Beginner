@@ -18,12 +18,10 @@
         <el-form-item label="活动名称" :label-width="formLabelWidth">
           <el-input v-model="form.name" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="活动区域" :label-width="formLabelWidth">
-          <el-select v-model="form.region" placeholder="请选择活动区域">
-            <el-option label="区域一" value="shanghai"></el-option>
-            <el-option label="区域二" value="beijing"></el-option>
-          </el-select>
-        </el-form-item>
+        <select v-model="vmodel">
+          <option v-for="val in selectVal" v-bind:value="val.id" >{{val.name}}</option>
+        </select>
+        <el-button type="primary" @click.native="tiemok()">取值</el-button>
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>
@@ -61,6 +59,23 @@
         }],
         dialogTableVisible: false,
         dialogFormVisible: false,
+        vmodel:'1',
+        selectVal: [{
+          name: '测试数据1',
+          id: 1
+        },{
+          name: '测试数据2',
+          id: 2
+        },{
+          name: '测试数据3',
+          id: 3
+        },{
+          name: '测试数据4',
+          id: 4
+        },{
+          name: '测试数据5',
+          id: 5
+        }],
         form: {
           name: '',
           region: '',
@@ -73,6 +88,12 @@
         },
         formLabelWidth: '120px'
       };
+    },
+    methods: {
+      tiemok(val) {
+        console.log(this.vmodel);
+        debugger
+      }
     }
   };
 </script>
