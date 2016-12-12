@@ -2,7 +2,7 @@
   <div class="block">
     <span class="demonstration">默认</span>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <div>23542345<input type="text" /></div>
+
     <el-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</el-button>
     <el-dialog title="收货地址" v-model="dialogTableVisible">
       <el-table :data="gridData">
@@ -21,7 +21,7 @@
         <select v-model="vmodel">
           <option v-for="val in selectVal" v-bind:value="val.id" >{{val.name}}</option>
         </select>
-        <el-button type="primary" @click.native="tiemok()">取值</el-button>
+        <el-button type="primary" @click.native="tiemok()">取值{{vmodel}}</el-button>
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>
@@ -92,7 +92,7 @@
     methods: {
       tiemok(val) {
         console.log(this.vmodel);
-        debugger
+        //debugger
       }
     }
   };
