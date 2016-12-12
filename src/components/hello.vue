@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      msg: '网仓3号在此向你问好'
+      msg: '在此向你问好'
     }
   }
 }
