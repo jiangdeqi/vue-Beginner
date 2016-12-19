@@ -28,6 +28,7 @@
     <el-col :span="6" class="mrg10T pad10L pad10R">
       <div class="grid-content pad10A bg-ccc height-300">
         <el-progress class="mrg25T" type="circle" :percentage="25"></el-progress>
+        <el-button type="primary" @click="kli()">请求调试</el-button>
       </div>
     </el-col>
   </el-row>
@@ -77,14 +78,24 @@
 
     },
     methods: {
-      tiemok: function(item) {
+      tiemok(item) {
         console.log(item.label);
       },
-      add: function(item){
+      add(item) {
         this.cardList.push({
           name:item.name,
           id:item.id,
           msg:item.msg
+        });
+      },
+      kli() {
+        this.$http.get('/data/menu.json').then((response) => {
+          console.log(response);
+            // 响应成功回调
+            debugger
+        }, (response) => {
+            // 响应错误回调
+            debugger
         });
       }
     }
