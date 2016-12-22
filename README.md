@@ -1,17 +1,17 @@
-# iscsweb
+# jdqweb
 
 > 个人学习资料VUE
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# install 安装依赖
 npm install
 
-# serve with hot reload at localhost:8000
+# serve 启动服务 localhost:8000
 npm run dev
 
-# build for production with minification
+# build 生产打包
 npm run build
 ```
 
