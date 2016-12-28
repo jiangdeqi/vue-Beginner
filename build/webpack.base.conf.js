@@ -14,7 +14,7 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
     filename: '[name].js'
   },
-  // 加载器
+  //其它解决方案配置
   resolve: {
     extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
@@ -35,6 +35,7 @@ module.exports = {
   },
   //加载模块
   module: {
+    //加载器
     loaders: [
       {
         test: /\.vue$/,
