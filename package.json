@@ -1,8 +1,8 @@
 {
   "name": "iscsweb",
-  "version": "1.0.0",
-  "description": "网仓科技3号",
-  "author": "网仓科技",
+  "version": "2.0.0",
+  "description": "个人学习VUE",
+  "author": "VUE2",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
