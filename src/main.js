@@ -7,6 +7,7 @@ import news from './views/news.vue'
 import Home from './views/home.vue'
 import Footers from './views/footers.vue'
 import Dlogs from './views/dlogs.vue'
+import login from './views/login.vue'
 
 //路由组件
 import VueRouter from 'vue-router'
@@ -41,6 +42,9 @@ const routes = [{
     }, {
         path:'/dlog',
         component: Dlogs
+    }, {
+        path:'/login',
+        component: login
     }
 ];
 const router = new VueRouter({
@@ -53,6 +57,5 @@ const app = new Vue({
         heads:Heads,
         footers:Footers
     }
-
 }).$mount('#app');
 // router.start(App, '#app');

@@ -10,6 +10,7 @@
   </el-submenu>
   <el-menu-item index="4"><router-link to="/news">news创建</router-link></el-menu-item>
   <el-menu-item index="5"><router-link to="/dlog">dialog创建</router-link></el-menu-item>
+  <el-menu-item index="5"><router-link to="/login">登陆页面</router-link></el-menu-item>
   
 </el-menu>
 </template>
